@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px;
+    background-color: #ffffff;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.mestre {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    flex-direction: column;
+    box-shadow: 0px 1px 15px #b0b0ae;
+}
+#topo {
+    display: flex;
+    margin: 0px 5px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    color: #5c5c5c;
+}
+#logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+#logo span {
+    color: #e2b908;
+}
+/** inicio do menu **/
+.pages {
+    display: flex;
+    list-style: none;
+}
+.pages li {
+    margin-left: 15px;
+    padding-right: 10px;
+    border-right: 1px solid #262626;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    padding: 4px;
+    box-shadow: 3px 4px 5px #26262667;
+}
+.sub_item {
+    margin: 5px 0px;
+    border-bottom: 1px solid #262626;
+}
+.sub_item:hover {
+    background-color: lightblue;
+}
+.pages li:hover .submenu {
+    display: block;
+}
+/** fim do menu **/
+#banner {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2b908;
+    color: #5c5c5c;
+}
+#banner_menu {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0a61e;
+}
+.menu_display {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+    font-size: 12px;
+    color: white;
+    border-radius: 40px;
+}
+.menu_display img {
+    margin-bottom: 10px;
+}
+.menu_display .black {
+    display: none;
+}
+.menu_display:hover {
+    background-color: white;
+    color: #262626;
+}
+.menu_display:hover .white {
+    display: none;
+}
+.menu_display:hover .black {
+    display: block;
+}
+.meio {
+    display: flex;
+    min-height: 300px;
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 15px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+
+}
+.op_geral {
+    margin: 0px 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 795px;
+    min-height: 75px;
+    word-wrap: break-word;
+    background-color: #ebebeb;
+    border: 1px dotted gray;
+    border-radius: 10px;
+}
+.op_title {
+    font-size: 17px;
+    font-weight: bold;
+}
+.op_ico {
+    font-size: 13px;
+}
+.op_desc {
+    padding-top: 5px;
+}
+.op_geral:hover {
+    background-color: #e2b908;
+}
+.meio_amarelo {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #e8d078;
+
+}
+#amarelo_cont {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+#amarelo_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+#amarelo_title {
+    margin: 5px 0px;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2b908;
+    color: #fff;
+    text-shadow: 0px 0px 1px black;
+    width: 40%;
+    border-radius: 10px;
+}
+#amarelo_title h1 {
+    font-size: 20px;
+}
+#amarelo_title p {
+    font-size: 15px;
+}
+#amarelo_title button {
+    border: none;
+    padding: 5px;
+    color: #fff;
+    background-color: #e55431;
+}
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #4e4e4c;
+}
+.rodape a {
+    color: #FFF;
+    text-decoration: none;
+}
+.admin_mestre {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.admin_function {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 5px 0px;
+    border-bottom: 1px solid black;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.mysql {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 30px;
+    margin: 10px 0px;
+    border: 2px solid green;
+    background-color: greenyellow;
+}
+.textogd {
+    height: 300px;
+    width: 500px;
+}
