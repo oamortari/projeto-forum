@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 5px 0px;
-    background-color: #ffffff;
+    background-color: #e1dcd2;
 }
 .container {
     display: flex;
@@ -14,6 +14,8 @@ body {
     max-width: 1000px;
     flex-direction: column;
     box-shadow: 0px 1px 15px #b0b0ae;
+    background-color: #FFF;
+    border-radius: 15px;
 }
 #topo {
     display: flex;
@@ -21,6 +23,12 @@ body {
     height: 50px;
     align-items: center;
     justify-content: space-between;
+    color: #5c5c5c;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#topo a {
+    text-decoration: none;
     color: #5c5c5c;
 }
 #logo {
@@ -86,6 +94,7 @@ body {
     font-size: 12px;
     color: white;
     border-radius: 40px;
+    cursor: pointer;
 }
 .menu_display img {
     margin-bottom: 10px;
@@ -114,6 +123,11 @@ body {
     flex-wrap: wrap;
     background-color: white;
 
+}
+.sep {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 .op_geral {
     margin: 0px 15px;
@@ -145,7 +159,6 @@ body {
     width: 100%;
     max-width: 1000px;
     background-color: #e8d078;
-
 }
 #amarelo_cont {
     display: flex;
@@ -191,6 +204,8 @@ body {
     width: 100%;
     max-width: 1000px;
     background-color: #4e4e4c;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 .rodape a {
     color: #FFF;
@@ -244,6 +259,7 @@ body {
     max-width: 400px;
     height: 350px;
     border-radius: 15px;
+    background-color: #FFF;
     box-shadow: 0px 1px 15px #b0b0ae;
     color: #5c5c5c;
 }

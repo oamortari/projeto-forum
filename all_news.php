@@ -1,14 +1,13 @@
 <?php
 include "config.php";        
-                    $consulta = $pdo->query("SELECT * FROM noticias ORDER BY ID DESC LIMIT 5");
+                    $consulta = $pdo->query("SELECT * FROM noticias ORDER BY ID DESC");
                     while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-                        $data = $linha['data'];
-                        $data = date('d/m/Y',  strtotime($data));
-                    echo "
+                    echo "<div class='container'>
                         <div class='op_geral' onclick='myFunction()'>
                         <div class='op_title'>{$linha['titulo']}</div>
-                        <div class='op_ico'>$data</div>
+                        <div class='op_ico'>{$linha['data']}</div>
                         <div class='op_desc'>{$linha['desc']}</div>
+                        </div>
                         </div>
                         ";}
                     ?>

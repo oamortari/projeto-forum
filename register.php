@@ -1,7 +1,7 @@
 <link href="style.css" rel="stylesheet"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, user-scalable=no">
-<div class="container yellow">
+<div class="container">
     <div class="registro"><h1>Registre-se</h1>
 <form method="POST" action="new_user.php">
     <input type="text" name="usuario" placeholder="Usuário"><br/>

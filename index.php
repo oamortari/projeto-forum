@@ -15,7 +15,7 @@
                     <div id="menu">
                         <nav>
                             <ul class="pages">
-                                <li>Início</li>
+                                <li><a href="index.php">Início</a></li>
                                 <li>Sobre
                                     <div class="submenu">
                                         <div class="sub_item">Sub1</div>
@@ -32,12 +32,12 @@
 
                 </div>
                 </div>
-                <div id="banner"><a href="style.css">Banner</a></div>
+                <div id="banner"><a href="style.css"><img src="img/logo.png"/></a></div>
                 <div id="banner_menu">
-                    <div class="menu_display">
+                    <div class="menu_display" onclick='index()'>
                         <img class="white" src="img/homew.png"/>
                         <img class="black" src="img/home.png"/>
-                      Home
+                        Home
                     </div>
 
                     <div class="menu_display">
@@ -52,6 +52,7 @@
                 <div class="meio">
                    <?php include 'meio.php' ?>
                 </div>
+                <div class="sep"><a href="all_news.php" target="_blank">Ver todas</a></div>
                 <div class="meio_amarelo">
                     <div id="amarelo_cont">
                         <div id="amarelo_img"><img src="img/forum.png"/></div>
