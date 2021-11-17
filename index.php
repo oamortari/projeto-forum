@@ -56,7 +56,7 @@
                     <div id="amarelo_cont">
                         <div id="amarelo_img"><img src="img/forum.png"/></div>
                         <div id="amarelo_title"><h1>Olá!</h1><p>Um fórum de discussão é uma ferramenta para páginas de Internet destinada a promover debates.</p>
-                        <button>Acessar</button>
+                        <a href="register.php"><button>Registrar</button></a>
                         </div>
                     </div>
                 </div>
