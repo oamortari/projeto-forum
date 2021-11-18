@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rodape"><a href="admin/admin.php">Admin</a></div>
+                <div class="rodape"><a href="admin/login.php">Admin</a></div>
                  </div>
              </div>
 
