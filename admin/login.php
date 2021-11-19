@@ -9,10 +9,11 @@ if (isset($_POST['usuario']) && empty($_POST['usuario'])==false) {
         $dado = $sql->fetch();
         $_SESSION['ID'] = $dado['ID'];
         $_SESSION['user'] = $dado['usuario'];
+        $_SESSION['logado'] = true;
         header('Location: admin.php');
 
     } else {
-        echo "Permissão inválida";
+        echo "<div class='container'><div class='mysqle'>Permissão não concedida</div></div>";
     }
 }
 ?>
