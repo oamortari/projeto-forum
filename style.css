@@ -133,7 +133,9 @@ body {
     margin: 0px 15px;
     margin-bottom: 15px;
     padding: 5px;
-    width: 795px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 795px;
     min-height: 75px;
     word-wrap: break-word;
     background-color: #ebebeb;
@@ -152,6 +154,10 @@ body {
 }
 .op_geral:hover {
     background-color: #e2b908;
+}
+.op {
+    color: #000;
+    text-decoration: none;
 }
 .meio_amarelo {
     display: flex;

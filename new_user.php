@@ -1,3 +1,7 @@
+<link href="style.css" rel="stylesheet"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<?php
 <?php 
 require "config.php";
 $usuario = $_POST['usuario'];

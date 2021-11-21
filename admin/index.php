@@ -1,18 +1,16 @@
-<?php 
-session_start();
-if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false) {
-require "../config.php"
-?>
 <link rel="stylesheet" href="../style.css"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, user-scalable=no">
+<?php 
+require "../config.php";
+session_start();
+if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false && $_SESSION['admin']==1) {
+?>
 <div class="container">Bem-vindo, <?php echo $_SESSION['user']; ?> - <a href="sair.php">Sair</a></div>
 <div class="container">
-    <div class="admin_mestre">
-<div class="admin_function"><a href="admin_news.php">Nova notícia</a></div>
-
+<div class="admin_mestre">
+<div class="admin_function"><a href="add_new.php">Nova notícia</a></div>
 <div class="meio">
-
     <?php 
     $sql = $pdo->query("SELECT * FROM noticias ORDER BY ID DESC");
     if($sql->rowCount() > 0) {
@@ -27,7 +25,8 @@ require "../config.php"
         <div class='op_ico'>$data</div>
         <div class='op_desc'>$texto</div>
         <a href='delete_new.php?id=$id'>Excluir</a> 
-        <a href='chg_new.php?id=$id'>Alterar</a><br>
+        <a href='chg_new.php?id=$id'>Alterar</a><br> 
+        <a href='../noticia.php?id=$id'>Comentários</a><br>
         </div>";
         endforeach;
         } else {
@@ -39,7 +38,7 @@ require "../config.php"
 </div> <br/>
 <div class="container">
     <div class="admin_mestre">
-<div class="admin_function"><a href="new_user.php">Novo usuário</a></div>
+<div class="admin_function"><a href="add_user.php">Novo usuário</a></div>
 <div class="meio">
 <?php
 $sql = $pdo->query("SELECT * FROM users");

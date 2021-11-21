@@ -1,13 +1,17 @@
+<link rel="stylesheet" href="../style.css"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no">
 <?php 
-session_start();
-if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false) {
 require "../config.php";
+session_start();
+if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false && $_SESSION['admin']==1) {
     if(isset($_POST['titulo'], $_POST['data'], $_POST['texto'])){
     $titulo = $_POST['titulo'];
     $data = $_POST['data'];
     $texto = $_POST['texto'];
     $sql = $pdo->query("INSERT INTO `noticias` (`ID`, `titulo`, `data`, `desc`) VALUES (NULL, '$titulo', '$data', '$texto');");
-    header("location: admin.php");
+    header("location: index.php");
+    exit;
     }
 ?>
 <link rel="stylesheet" href="../style.css"/>

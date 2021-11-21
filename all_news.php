@@ -1,3 +1,6 @@
+<link href="style.css" rel="stylesheet"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no">
 <?php
 include "config.php";        
                     $sql = $pdo->query("SELECT * FROM noticias ORDER BY ID DESC");

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
     <body>
-    <?php include "config.php";?>
+    <?php include "config.php"; ?>
         <div class=container>
             <div class=mestre>
                 <div id="topo">
@@ -57,11 +57,11 @@
                     <div id="amarelo_cont">
                         <div id="amarelo_img"><img src="img/forum.png"/></div>
                         <div id="amarelo_title"><h1>Olá!</h1><p>Um fórum de discussão é uma ferramenta para páginas de Internet destinada a promover debates.</p>
-                        <a href="register.php"><button>Registrar</button></a>
+                        <a href="register.php" target="_blank"><button>Registrar</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="rodape"><a href="admin/login.php">Admin</a></div>
+                <div class="rodape"><a href="admin/index.php" target="_blank">Admin</a></div>
                  </div>
              </div>
 
