@@ -6,7 +6,7 @@ require "../config.php";
 session_start();
 if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false && $_SESSION['admin']==1) {
 ?>
-<div class="container">Bem-vindo, <?php echo $_SESSION['user']; ?> - <a href="sair.php">Sair</a></div>
+<div class="container">Bem-vindo, <?php echo $_SESSION['user']; ?> - <a href="../sair.php">Sair</a></div>
 <div class="container">
 <div class="admin_mestre">
 <div class="admin_function"><a href="add_new.php">Nova notícia</a></div>

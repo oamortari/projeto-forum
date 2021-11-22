@@ -3,6 +3,10 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <?php
 require "config.php";
+session_start();
+if(isset($_SESSION['ID']) && !empty($_SESSION['ID'])){
+    header("location: index.php");
+}
 if (isset($_POST['usuario']) && empty($_POST['usuario']) or isset($_POST['email']) && empty($_POST['email']) or isset($_POST['senha']) && empty($_POST['senha'])) {
     echo "<div class='container'><div class='mysqle'>Preencha todos os campos!</div></div> <br>
     <div class='container'><a href='register.php'>Voltar</a></div>";

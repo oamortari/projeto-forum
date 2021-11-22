@@ -6,10 +6,10 @@ session_start();
 require "config.php";
 $id = $_GET['id'];
 //enviar comentário
-if(isset($_POST['autor']) && !empty($_POST['autor'])) {
+if(isset($_POST['corpo']) && !empty($_POST['corpo'])) {
     $sql = $pdo->prepare("INSERT INTO `comentarios` (`id`, `id_noticia`, `autor`, `data`, `corpo`) VALUES (NULL, :id, :autor, NULL, :corpo);");
     $sql->bindValue(":id", $id);
-    $sql->bindValue(":autor", $_POST['autor']);
+    $sql->bindValue(":autor", $_SESSION['user']);
     $sql->bindValue(":corpo", $_POST['corpo']);
     $sql->execute();  
 }
@@ -56,7 +56,7 @@ if ($sql->rowCount() > 0) {
     <div class='op_title'>$autor_c</div>
     <div class='op_ico'></div>
     <div class='op_desc'>$corpo_c</div>";
-    if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false && $_SESSION['admin']==1) {
+    if (isset($_SESSION['ID']) && empty($_SESSION['ID'])==false && $_SESSION['admin']==1 || ($_SESSION['user']==$autor_c)) {
         echo "<a href=delete_c.php?id=$id_c&id_n=$id>Excluir</a></div></div>";
     } echo "</div></div>";
     endforeach;
@@ -68,11 +68,18 @@ if ($sql->rowCount() > 0) {
 }
 //campo para comentar
 ?>
+<?php
+if (isset($_SESSION['ID']) && !empty($_SESSION['ID'])) {?>
 <div class='container'>
 <form method="post">
     Autor<br/>
-    <input type="text" name="autor" placeholder="Qual o seu nome?"><br/><br/>
+    <br/><br/>
     Faça seu comentário!<br/>
     <textarea name="corpo"  rows="10" cols="30"></textarea><br/><br/>
     <input type="submit" value="Comentar">
-</form></div>
+</form></div><?php }else {
+    echo "
+    <div class='container'>
+    <div class='mysqle'>Você precisa estar logado para comentar!
+    </div></div>";
+}?>
